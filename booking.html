@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Cylinder</title>
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+  <div class="overlay center-box">
+    <h2>🛢️ Book a Cylinder</h2>
+    <form id="bookingForm">
+      <input type="text" id="address" placeholder="Delivery Address" required>
+      <select id="payment" required>
+        <option value="" disabled selected>Select Payment Method</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+        <option value="Online Payment">Online Payment</option>
+      </select>
+      <button type="submit">Confirm Booking</button>
+    </form>
+    <p><a href="user.html">⬅️ Back to Dashboard</a></p>
+  </div>
+
+  <script type="module" src="scripts/booking.js"></script>
+</body>
+</html>

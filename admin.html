@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+  <h2>Welcome, Admin</h2>
+
+  <!-- Section 1: Post a Notice -->
+  <section>
+    <h3>📣 Post a Notice</h3>
+    <form id="noticeForm">
+      <input type="text" id="noticeTitle" placeholder="Title" required><br>
+      <textarea id="noticeMessage" placeholder="Message" required></textarea><br>
+      <button type="submit">Post Notice</button>
+    </form>
+  </section>
+
+  <!-- Section 2: View Bookings -->
+  <section>
+    <h3>📦 All Booking Requests</h3>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Address</th>
+          <th>Payment</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="bookingTable"></tbody>
+    </table>
+  </section>
+
+  <!-- Section 3: View Users -->
+  <section>
+    <h3>👤 Registered Users</h3>
+    <ul id="userList"></ul>
+  </section>
+
+  <p><a href="#" id="logoutBtn">Logout</a></p>
+
+  <script type="module" src="scripts/admin.js"></script>
+</body>
+</html>

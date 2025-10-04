@@ -1,0 +1,244 @@
+/* 🌐 Global Background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://i.pinimg.com/736x/5a/62/f7/5a62f797e638e98f69e7f3aa5f642954.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🌫️ Glassmorphism Overlay */
+.overlay {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 16px;
+  max-width: 1200px;
+  margin: 30px auto;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* ✨ Center box for index.html */
+.center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 40px;
+  max-width: 500px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  animation: popIn 0.6s ease;
+}
+
+/* 🟦 Headings */
+h1, h2, h3 {
+  color: #1c3f8a;
+  margin-top: 0;
+  animation: popIn 0.6s ease;
+  text-align: center;
+}
+
+/* 🟡 Button group (Home) */
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 22px;
+  background-color: #1c5bcf;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(28, 91, 207, 0.2);
+}
+
+.btn:hover {
+  background-color: #153b88;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(28, 91, 207, 0.3);
+}
+
+/* 📝 Forms */
+form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #1c5bcf;
+  box-shadow: 0 0 5px rgba(28, 91, 207, 0.4);
+}
+
+/* 🟦 Buttons */
+button {
+  background: #2a4d8f;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: #1f3970;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(42, 77, 143, 0.4);
+}
+
+/* ✅ Approve / Reject Button Styles */
+button.approve {
+  background: #28a745;
+}
+
+button.approve:hover {
+  background: #1e7e34;
+}
+
+button.reject {
+  background: #dc3545;
+}
+
+button.reject:hover {
+  background: #a71d2a;
+}
+
+/* 📊 Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #1c5bcf;
+  color: white;
+}
+
+tr:hover {
+  background: rgba(28, 91, 207, 0.05);
+}
+
+/* 📜 Lists */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  animation: slideUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+/* 🌐 Links */
+a {
+  color: #1c5bcf;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #153b88;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .center-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+}
+
+/* 🔁 Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
